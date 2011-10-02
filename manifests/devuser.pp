@@ -1,2 +1,2 @@
-class { "vim":
-}
+class { "vim": }
+class { "vim::config": user => eirikur }

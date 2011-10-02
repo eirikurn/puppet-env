@@ -1,13 +1,36 @@
+$vimPackage = $operatingsystem ? {
+  darwin  => mvim,
+  ubuntu  => vim-gnome,
+  default => vim,
+}
+
 class vim {
-  $vim = $operatingsystem ? {
-    darwin  => mvim,
-    ubuntu  => vim-gnome,
-    default => vim,
-  }
-  package { $vim:
+  package { $vimPackage:
+    name   => vim,
     ensure => installed,
   }
-  file { "/home/${id}/.vimrc":
-    source => "puppet:///modules/vim/vimrc",
+}
+
+class vim::config ( $user ) {
+  file { "/home/$user/.vimrc":
+    content => template("vim/vimrc"),
+    require => Package[vim],
+  }
+
+  # Ignore git files for following copies
+  File { ignore => '.git' }
+
+  file { "/home/$user/.vim/autoload":
+    source => "puppet:///modules/vim/autoload",
+    recurse => true,
+    mode => 644,
+    require => File["/home/$user/.vimrc"],
+  }
+
+  file { "/home/$user/.vim/bundle":
+    source => "puppet:///modules/vim/bundle",
+    recurse => true,
+    mode => 644,
+    require => File["/home/$user/.vimrc"],
   }
 }

@@ -1,0 +1,42 @@
+[submodule "modules/vim/files/bundle/commentary"]
+	path = modules/vim/files/bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "modules/vim/files/bundle/fugitive"]
+	path = modules/vim/files/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "modules/vim/files/bundle/indentpython"]
+	path = modules/vim/files/bundle/indentpython
+	url = https://github.com/vim-scripts/indentpython.vim
+[submodule "modules/vim/files/bundle/markdown"]
+	path = modules/vim/files/bundle/markdown
+	url = https://github.com/tpope/vim-markdown
+[submodule "modules/vim/files/bundle/puppet"]
+	path = modules/vim/files/bundle/puppet
+	url = https://github.com/uggedal/puppet-vim
+[submodule "modules/vim/files/bundle/supertab"]
+	path = modules/vim/files/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "modules/vim/files/bundle/surround"]
+	path = modules/vim/files/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "modules/vim/files/bundle/syntastic"]
+	path = modules/vim/files/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "modules/vim/files/bundle/stylus"]
+	path = modules/vim/files/bundle/stylus
+	url = https://github.com/wavded/vim-stylus
+[submodule "modules/vim/files/bundle/Command-T"]
+	path = modules/vim/files/bundle/Command-T
+	url = https://github.com/wincent/Command-T.git
+[submodule "modules/vim/files/bundle/Zenburn"]
+	path = modules/vim/files/bundle/Zenburn
+	url = https://github.com/vim-scripts/Zenburn.git
+[submodule "modules/vim/files/bundle/nerdtree"]
+	path = modules/vim/files/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "modules/vim/files/bundle/coffee-script"]
+	path = modules/vim/files/bundle/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script
+[submodule "modules/vim/files/bundle/jade"]
+	path = modules/vim/files/bundle/jade
+	url = https://github.com/digitaltoad/vim-jade

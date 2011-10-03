@@ -14,6 +14,8 @@ class vim {
 class vim::config ( $user ) {
   file { "/home/$user/.vimrc":
     content => template("vim/vimrc"),
+    owner   => $user,
+    group   => $user,
     require => Package[vim],
   }
 

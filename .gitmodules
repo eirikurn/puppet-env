@@ -40,3 +40,6 @@
 [submodule "modules/vim/files/bundle/jade"]
 	path = modules/vim/files/bundle/jade
 	url = https://github.com/digitaltoad/vim-jade
+[submodule "modules/zsh/files/oh-my-zsh"]
+	path = modules/zsh/files/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git

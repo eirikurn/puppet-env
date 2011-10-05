@@ -6,11 +6,14 @@ class zsh {
 
 class zsh::config ( $user ) {
   file { "/home/$user/.zshrc":
-    source => "puppet:///modules/zsh/oh-my-zsh/templates/zshrc.zsh-template",
+    content => template("zsh/zshrc"),
     owner   => $user,
     group   => $user,
     require => Package["zsh"],
   }
+
+  # Ignore git files for following copies
+  File { ignore => '.git' }
 
   file { "/home/$user/.oh-my-zsh":
     source  => "puppet:///modules/zsh/oh-my-zsh",

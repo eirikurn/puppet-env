@@ -5,13 +5,13 @@ $vimPackage = $operatingsystem ? {
 }
 
 class vim {
-  package { $vimPackage:
-    name   => vim,
+  package { vim:
+    name   => $vimPackage,
     ensure => installed,
   }
 }
 
-class vim::config ( $user ) {
+class vim::config  {
   file { "/home/$user/.vimrc":
     content => template("vim/vimrc"),
     owner   => $user,

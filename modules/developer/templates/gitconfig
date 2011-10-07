@@ -1,0 +1,18 @@
+[user]
+	name = <%= dev_user %>
+	email = <%= dev_email %>
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	editor = vim
+[apply]
+	whitespace = nowarn
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+<% if has_variable?("github_user") then %>
+[github]
+	user = <%= github_user %>
+	token = <%= github_token %>
+<% end %>

@@ -1,2 +1,2 @@
 default:
-	PUPPETLIB=modules puppet apply manifests/devuser.pp
+	@PUPPETLIB=modules puppet apply manifests/init.pp

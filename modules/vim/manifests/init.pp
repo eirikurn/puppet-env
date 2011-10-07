@@ -11,7 +11,7 @@ class vim {
   }
 }
 
-class vim::config  {
+class vim::config($user) {
   file { "/home/$user/.vimrc":
     content => template("vim/vimrc"),
     owner   => $user,

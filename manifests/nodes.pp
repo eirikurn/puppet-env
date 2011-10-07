@@ -1,15 +1,10 @@
 node basenode {
-  $user = eirikur
+  $dev_user = eirikur
+  $dev_email = "eirikur@nilsson.is"
 }
 
-node 'eirikur-VirtualBox' inherits basenode {
+node default inherits basenode {
   include general
-  include developer
-  include role_borgaserver
-}
-
-node default {
-  include general
-  include developer
+  include role_developer
 }
 

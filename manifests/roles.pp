@@ -1,13 +1,9 @@
 class general {
+}
+
+class role_developer {
   include vim
-  include vim::config
-  include zsh
-  include zsh::config
-}
-
-class role_borgaserver {
-}
-
-class role_coredataserver {
+  class { 'vim::config': user      => $dev_user }
+  class { developer: config_user => $dev_user }
 }
 
